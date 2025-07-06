@@ -1,12 +1,50 @@
-# React + Vite
+# Калькулятор филёнки
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Веб-приложение для расчёта количества филёнки и подпилов для мебельного производства.
 
-Currently, two official plugins are available:
+## Функции
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Добавление и управление моделями мебели
+- Управление цветовой палитрой
+- Расчёт количества филёнки по размерам
+- Расчёт подпилов
+- Фильтрация по цветам
+- Сводка по материалам
 
-## Expanding the ESLint configuration
+## Технологии
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 19
+- Vite
+- React Router DOM
+- LocalStorage для хранения данных
+
+## Локальная разработка
+
+```bash
+npm install
+npm run dev
+```
+
+## Сборка
+
+```bash
+npm run build
+```
+
+## Деплой на Render.com
+
+1. Создайте аккаунт на [Render.com](https://render.com)
+2. Подключите ваш GitHub репозиторий
+3. Создайте новый **Static Site**
+4. Настройте:
+   - **Build Command**: `npm install && npm run build`
+   - **Publish Directory**: `dist`
+5. Нажмите **Create Static Site**
+
+Приложение автоматически деплоится при каждом push в main ветку.
+
+## Структура проекта
+
+- `src/MaterialCalculator.jsx` - основной калькулятор
+- `src/ManagePage.jsx` - управление моделями и цветами
+- `src/App.jsx` - роутинг и навигация
